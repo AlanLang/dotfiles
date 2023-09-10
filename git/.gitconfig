@@ -1,43 +1,43 @@
 [user]
-	name = alan
-	email = langwdalan@gmail.com
+  name = alan
+  email = langwdalan@gmail.com
 
 [github]
-	user = alanlang
+  user = alanlang
 
 [core]
-	excludesfile = ~/.config/git/ignore
-	editor = code --wait
-	filemode = false
-	trustctime = false
-	autocrlf = input
-	untrackedCache = true
-	pager = diff-so-fancy | less --tabs=4 -RFX
-	ignorecase = false
+  excludesfile = ~/.config/git/ignore
+  editor = code --wait
+  filemode = false
+  trustctime = false
+  autocrlf = input
+  untrackedCache = true
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  ignorecase = false
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [pull]
-	rebase = true
+  rebase = true
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [push]
-	default = simple
-	followTags = true
+  default = simple
+  followTags = true
 
 [fetch]
-	prune = true
+  prune = true
 
 [grep]
-	lineNumber = true
+  lineNumber = true
 
 [help]
-	autocorrect = 1
+  autocorrect = 1
 
 [alias]
-	ca = commit --amend --reuse-message=HEAD
+  ca = commit --amend --reuse-message=HEAD
   pf = push -f
   pd = push -u dev
