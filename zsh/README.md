@@ -26,6 +26,19 @@ plugins=(
 )
 ```
 
+### 命令高亮
+https://github.com/zsh-users/zsh-syntax-highlighting
+
+Clone this repository in oh-my-zsh's plugins directory:
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+Activate the plugin in ~/.zshrc:
+```
+plugins=( [plugins...] zsh-syntax-highlighting)
+```
+
+
 ### 主题
 https://github.com/romkatv/powerlevel10k 
 
