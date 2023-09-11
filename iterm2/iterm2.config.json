@@ -184,6 +184,12 @@
       "Text" : "02 6b",
       "Label" : ""
     },
+    "0x72-0x100000-0xf" : {
+      "Version" : 1,
+      "Action" : 11,
+      "Text" : "02 2c",
+      "Label" : ""
+    },
     "0x71-0x100000-0xc" : {
       "Version" : 1,
       "Action" : 11,
@@ -208,16 +214,16 @@
       "Text" : "02 77",
       "Label" : ""
     },
-    "0x6c-0x100000-0x25" : {
-      "Version" : 1,
-      "Action" : 11,
-      "Text" : "02 6c",
-      "Label" : ""
-    },
     "0x68-0x100000-0x4" : {
       "Version" : 1,
       "Action" : 11,
       "Text" : "02 68",
+      "Label" : ""
+    },
+    "0x6c-0x100000-0x25" : {
+      "Version" : 1,
+      "Action" : 11,
+      "Text" : "02 6c",
       "Label" : ""
     },
     "0x77-0x100000-0xd" : {
