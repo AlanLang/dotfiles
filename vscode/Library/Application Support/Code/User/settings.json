@@ -85,9 +85,10 @@
   "gitlens.codeLens.enabled": false,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
     "plaintext": true,
     "markdown": true,
+    "scminput": false,
+    "yaml": true,
     "typescript": true
   },
   "typescript.preferences.importModuleSpecifier": "relative",
@@ -326,16 +327,16 @@
       "before": ["<Leader>", "z"],
       "commands": ["workbench.action.navigateForward"]
     },{
-      "before": ["<Leader>", "s"],
+      "before": ["<Leader>", "w"],
       "commands": ["workbench.action.files.save"]
     },{
-      "before": ["<Leader>", "w"],
+      "before": ["<Leader>", "q"],
       "commands": ["workbench.action.closeActiveEditor"]
     },{
-      "before": ["<Leader>", "q"],
+      "before": ["<Leader>", "Q"],
       "commands": ["workbench.action.closeEditorsInOtherGroups"]
     },{
-      "before": ["<Leader>", "Q"],
+      "before": ["<Leader>", "R"],
       "commands": ["workbench.action.reopenClosedEditor"]
     },{
       "before": ["<Leader>", "d"],
@@ -407,5 +408,13 @@
   "vim.leap.enable": true,
   "vim.leap.bidirectionalSearch": true,
   "vim.leap.caseSensitive": false,
-  "editor.minimap.autohide": true
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
