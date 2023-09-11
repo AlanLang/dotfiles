@@ -85,7 +85,7 @@ plugins=(
   tmux
   aliases 
 )
-
+zstyle ':omz:lib:directories' aliases no
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -114,6 +114,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v='nvim'
+alias l='ls -lah'
+alias ll='ls -lh'
+alias la='ls -lAh'
+alias t='tmux ls && read session && tmux -CC attach -t ${session:-default} || tmux -CC new -s ${session:-default}'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

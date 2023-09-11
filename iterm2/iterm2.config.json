@@ -148,10 +148,10 @@
   "Custom Command" : "No",
   "HotKey Key Code" : 17,
   "Keyboard Map" : {
-    "0x6a-0x100000-0x26" : {
+    "0x77-0x100000-0xd" : {
       "Version" : 1,
       "Action" : 11,
-      "Text" : "02 6a",
+      "Text" : "02 78",
       "Label" : ""
     },
     "0x64-0x100000-0x2" : {
@@ -196,16 +196,16 @@
       "Text" : "02 64",
       "Label" : ""
     },
-    "0x7a-0x100000-0x6" : {
-      "Version" : 1,
-      "Action" : 11,
-      "Text" : "02 7a",
-      "Label" : ""
-    },
     "0x50-0x120000-0x23" : {
       "Version" : 1,
       "Action" : 11,
       "Text" : "02 73",
+      "Label" : ""
+    },
+    "0x7a-0x100000-0x6" : {
+      "Version" : 1,
+      "Action" : 11,
+      "Text" : "02 7a",
       "Label" : ""
     },
     "0x70-0x100000-0x23" : {
@@ -226,10 +226,10 @@
       "Text" : "02 6c",
       "Label" : ""
     },
-    "0x77-0x100000-0xd" : {
+    "0x6a-0x100000-0x26" : {
       "Version" : 1,
       "Action" : 11,
-      "Text" : "02 78",
+      "Text" : "02 6a",
       "Label" : ""
     }
   },
@@ -376,6 +376,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.12613683938980103
   },
+  "Initial Text" : "",
   "Screen" : -1,
   "HotKey Characters Ignoring Modifiers" : "T",
   "Initial Use Transparency" : true,
