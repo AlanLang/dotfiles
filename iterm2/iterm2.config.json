@@ -74,9 +74,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
             "auto-rainbow style" : 0,
-            "algorithm" : 0,
-            "remove empty components" : false
+            "algorithm" : 0
           }
         }
       },
@@ -91,9 +91,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
             "auto-rainbow style" : 0,
-            "algorithm" : 0,
-            "remove empty components" : false
+            "algorithm" : 0
           }
         }
       }
@@ -148,10 +148,10 @@
   "Custom Command" : "No",
   "HotKey Key Code" : 17,
   "Keyboard Map" : {
-    "0x77-0x100000-0xd" : {
+    "0x6a-0x100000-0x26" : {
       "Version" : 1,
       "Action" : 11,
-      "Text" : "02 78",
+      "Text" : "02 6a",
       "Label" : ""
     },
     "0x64-0x100000-0x2" : {
@@ -196,6 +196,12 @@
       "Text" : "02 64",
       "Label" : ""
     },
+    "0x52-0x120000-0xf" : {
+      "Version" : 1,
+      "Action" : 11,
+      "Text" : "02 24",
+      "Label" : ""
+    },
     "0x50-0x120000-0x23" : {
       "Version" : 1,
       "Action" : 11,
@@ -226,10 +232,10 @@
       "Text" : "02 6c",
       "Label" : ""
     },
-    "0x6a-0x100000-0x26" : {
+    "0x77-0x100000-0xd" : {
       "Version" : 1,
       "Action" : 11,
-      "Text" : "02 6a",
+      "Text" : "02 78",
       "Label" : ""
     }
   },
@@ -296,9 +302,9 @@
     "Alpha Component" : 1,
     "Green Component" : 0.27702754735946655
   },
-  "Name" : "Default",
+  "Name" : "alan",
   "Blinking Cursor" : false,
-  "Guid" : "9E563023-BDBB-478C-81CE-6DCD1DBCBBED",
+  "Guid" : "1155C42E-6CFA-47E9-8B5A-04A38EB96A77",
   "Ansi 8 Color" : {
     "Red Component" : 0.3234245777130127,
     "Color Space" : "Calibrated",
