@@ -82,6 +82,8 @@ plugins=(
   git
   z
   zsh-syntax-highlighting
+  tmux
+  aliases 
 )
 
 source $ZSH/oh-my-zsh.sh
