@@ -8,7 +8,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.72239696979522705
   },
-  "Rows" : 50,
+  "Rows" : 40,
   "Ansi 11 Color" : {
     "Red Component" : 0.97044718265533447,
     "Color Space" : "Calibrated",
@@ -74,9 +74,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "algorithm" : 0,
             "remove empty components" : false,
-            "auto-rainbow style" : 0,
-            "algorithm" : 0
+            "auto-rainbow style" : 0
           }
         }
       },
@@ -91,9 +91,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "algorithm" : 0,
             "remove empty components" : false,
-            "auto-rainbow style" : 0,
-            "algorithm" : 0
+            "auto-rainbow style" : 0
           }
         }
       }
@@ -117,6 +117,7 @@
   },
   "Right Option Key Changeable" : true,
   "BM Growl" : true,
+  "Icon" : 1,
   "Ansi 3 Color" : {
     "Red Component" : 0.97044718265533447,
     "Color Space" : "Calibrated",
@@ -125,8 +126,8 @@
     "Green Component" : 0.74274349212646484
   },
   "Use Non-ASCII Font" : false,
-  "Use Custom Tab Title" : false,
   "Shortcut" : "",
+  "Use Custom Tab Title" : false,
   "Link Color" : {
     "Red Component" : 0.023000000044703484,
     "Color Space" : "Calibrated",
@@ -329,7 +330,7 @@
   },
   "Smart Cursor Color" : false,
   "Ambiguous Double Width" : false,
-  "Blur Radius" : 0.10000000000000001,
+  "Blur Radius" : 3.9728869499044217,
   "Cursor Type" : 2,
   "Ansi 0 Color" : {
     "Red Component" : 0.082745037972927094,
@@ -349,6 +350,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.99997437000274658
   },
+  "Space" : 0,
   "HotKey Window AutoHides" : true,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
@@ -373,7 +375,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.64762973785400391
   },
-  "Transparency" : 0.056449468085106383,
+  "Transparency" : 0.16164842970827792,
   "HotKey Activated By Modifier" : false,
   "Background Color" : {
     "Red Component" : 0.082745037972927094,
@@ -394,12 +396,13 @@
     "Alpha Component" : 1,
     "Green Component" : 0.49488019943237305
   },
-  "Columns" : 180,
+  "Columns" : 150,
   "HotKey Alternate Shortcuts" : [
 
   ],
   "Unicode Normalization" : 0,
   "Visual Bell" : true,
+  "Use Tab Color" : false,
   "Custom Directory" : "No",
   "Ansi 5 Color" : {
     "Red Component" : 0.71825045347213745,
