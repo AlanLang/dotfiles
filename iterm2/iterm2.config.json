@@ -18,7 +18,7 @@
   },
   "Use Italic Font" : true,
   "Use libtickit protocol" : true,
-  "HotKey Characters" : "ˇ",
+  "HotKey Characters" : "l",
   "Foreground Color" : {
     "Red Component" : 0.70114254951477051,
     "Color Space" : "Calibrated",
@@ -74,9 +74,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "auto-rainbow style" : 0,
             "algorithm" : 0,
-            "remove empty components" : false,
-            "auto-rainbow style" : 0
+            "remove empty components" : false
           }
         }
       },
@@ -91,9 +91,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "auto-rainbow style" : 0,
             "algorithm" : 0,
-            "remove empty components" : false,
-            "auto-rainbow style" : 0
+            "remove empty components" : false
           }
         }
       }
@@ -147,7 +147,7 @@
   "Unlimited Scrollback" : false,
   "Allow modifyOtherKeys" : true,
   "Custom Command" : "No",
-  "HotKey Key Code" : 17,
+  "HotKey Key Code" : 37,
   "Keyboard Map" : {
     "0x6a-0x100000-0x26" : {
       "Version" : 1,
@@ -276,10 +276,10 @@
     "Alpha Component" : 1,
     "Green Component" : 0.52402210235595703
   },
-  "Window Type" : 0,
+  "Window Type" : 9,
   "Use Bright Bold" : true,
   "Has Hotkey" : true,
-  "HotKey Modifier Activation" : 0,
+  "HotKey Modifier Activation" : 1,
   "Cursor Text Color" : {
     "Red Component" : 0.082745037972927094,
     "Color Space" : "Calibrated",
@@ -330,7 +330,7 @@
   },
   "Smart Cursor Color" : false,
   "Ambiguous Double Width" : false,
-  "Blur Radius" : 3.9728869499044217,
+  "Blur Radius" : 0.10000000000000001,
   "Cursor Type" : 2,
   "Ansi 0 Color" : {
     "Red Component" : 0.082745037972927094,
@@ -339,7 +339,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.12613683938980103
   },
-  "Blur" : true,
+  "Blur" : false,
   "Normal Font" : "MonacoNerdFontComp- 16",
   "Application Keypad Allowed" : true,
   "Vertical Spacing" : 1.1000000000000001,
@@ -358,7 +358,7 @@
   "Option Key Sends" : 2,
   "Minimum Contrast" : 0,
   "HotKey Window Animates" : true,
-  "HotKey Modifier Flags" : 655360,
+  "HotKey Modifier Flags" : 1048576,
   "Ansi 15 Color" : {
     "Red Component" : 1,
     "Color Space" : "Calibrated",
@@ -375,8 +375,8 @@
     "Alpha Component" : 1,
     "Green Component" : 0.64762973785400391
   },
-  "Transparency" : 0.16164842970827792,
-  "HotKey Activated By Modifier" : false,
+  "Transparency" : 0.14604005204870346,
+  "HotKey Activated By Modifier" : true,
   "Background Color" : {
     "Red Component" : 0.082745037972927094,
     "Color Space" : "Calibrated",
@@ -386,7 +386,7 @@
   },
   "Initial Text" : "",
   "Screen" : -1,
-  "HotKey Characters Ignoring Modifiers" : "T",
+  "HotKey Characters Ignoring Modifiers" : "l",
   "Initial Use Transparency" : true,
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
