@@ -18,7 +18,7 @@
   },
   "Use Italic Font" : true,
   "Use libtickit protocol" : true,
-  "HotKey Characters" : "l",
+  "HotKey Characters" : "",
   "Foreground Color" : {
     "Red Component" : 0.70114254951477051,
     "Color Space" : "Calibrated",
@@ -74,9 +74,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
             "auto-rainbow style" : 0,
-            "algorithm" : 0,
-            "remove empty components" : false
+            "algorithm" : 0
           }
         }
       },
@@ -91,9 +91,9 @@
             "maxwidth" : 1.7976931348623157e+308
           },
           "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
             "auto-rainbow style" : 0,
-            "algorithm" : 0,
-            "remove empty components" : false
+            "algorithm" : 0
           }
         }
       }
@@ -147,7 +147,7 @@
   "Unlimited Scrollback" : false,
   "Allow modifyOtherKeys" : true,
   "Custom Command" : "No",
-  "HotKey Key Code" : 37,
+  "HotKey Key Code" : 0,
   "Keyboard Map" : {
     "0x6a-0x100000-0x26" : {
       "Version" : 1,
@@ -305,7 +305,7 @@
   },
   "Name" : "alan",
   "Blinking Cursor" : false,
-  "Guid" : "1155C42E-6CFA-47E9-8B5A-04A38EB96A77",
+  "Guid" : "D065B31A-C71F-449E-ABA0-776B28D5064C",
   "Ansi 8 Color" : {
     "Red Component" : 0.3234245777130127,
     "Color Space" : "Calibrated",
@@ -330,7 +330,7 @@
   },
   "Smart Cursor Color" : false,
   "Ambiguous Double Width" : false,
-  "Blur Radius" : 0.10000000000000001,
+  "Blur Radius" : 1.7598027655418884,
   "Cursor Type" : 2,
   "Ansi 0 Color" : {
     "Red Component" : 0.082745037972927094,
@@ -339,7 +339,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.12613683938980103
   },
-  "Blur" : false,
+  "Blur" : true,
   "Normal Font" : "MonacoNerdFontComp- 16",
   "Application Keypad Allowed" : true,
   "Vertical Spacing" : 1.1000000000000001,
@@ -358,7 +358,7 @@
   "Option Key Sends" : 2,
   "Minimum Contrast" : 0,
   "HotKey Window Animates" : true,
-  "HotKey Modifier Flags" : 1048576,
+  "HotKey Modifier Flags" : 0,
   "Ansi 15 Color" : {
     "Red Component" : 1,
     "Color Space" : "Calibrated",
@@ -386,7 +386,7 @@
   },
   "Initial Text" : "",
   "Screen" : -1,
-  "HotKey Characters Ignoring Modifiers" : "l",
+  "HotKey Characters Ignoring Modifiers" : "",
   "Initial Use Transparency" : true,
   "Non Ascii Font" : "Monaco 12",
   "Ansi 13 Color" : {
