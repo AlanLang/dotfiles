@@ -82,7 +82,8 @@ plugins=(
   z
   zsh-syntax-highlighting
   tmux
-  aliases 
+  aliases
+  dotenv
 )
 zstyle ':omz:lib:directories' aliases no
 source $ZSH/oh-my-zsh.sh
