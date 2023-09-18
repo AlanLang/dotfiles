@@ -14,3 +14,6 @@ git clone https://github.com/AlanLang/dotfile.git ~/dotfiles
 cd ~/dotfiles
 stow git
 ```
+
+## Font
+https://github.com/ryanoasis/nerd-fonts/releases
