@@ -89,7 +89,7 @@ zstyle ':omz:lib:directories' aliases no
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
+export XDG_CONFIG_HOME="$HOME/.config" # lazygit config
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
