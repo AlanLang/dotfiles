@@ -9,13 +9,14 @@ return {
     },
     modes = {
       char = {
+        enabled = false,
         jump_labels = true,
       }
     }
   },
   keys = {
     {
-      "s",
+      "f",
       mode = { "n", "x", "o" },
       function()
         require("flash").jump()
