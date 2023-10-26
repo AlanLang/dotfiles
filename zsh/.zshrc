@@ -118,7 +118,8 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 alias t='tmux ls && read session && tmux attach -t ${session:-default} || tmux new -s ${session:-default}'
 alias dc='docker-compose'
-
+alias gz='tar -zcvf file.tar.gz'
+alias ugz='tar -zxvf'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
