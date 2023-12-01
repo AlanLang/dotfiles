@@ -16,7 +16,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
   "editor.multiCursorModifier": "ctrlCmd",
-  "editor.mouseWheelZoom": true,
+  "editor.mouseWheelZoom": false,
   "editor.tabSize": 2,
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.stickyScroll.enabled": true,
@@ -155,8 +155,7 @@
     "Unmount"
   ],
   "files.autoSave": "off",
-  "liveServer.settings.donotShowInfoMsg": true, 
-  "workbench.editor.untitled.hint": "hidden",
+  "liveServer.settings.donotShowInfoMsg": true,
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
