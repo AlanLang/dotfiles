@@ -52,7 +52,7 @@
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "extensions.ignoreRecommendations": true,
   "files.eol": "\n",
-  "files.insertFinalNewline": true,
+  "files.insertFinalNewline": false,
   "files.simpleDialog.enable": true,
   "files.autoGuessEncoding": true,
   "git.autofetch": true,
@@ -606,7 +606,7 @@
         "n"
       ],
       "commands": [
-        "workbench.action.maximizeEditor"
+        "workbench.action.toggleEditorWidths"
       ]
     },
     {
@@ -615,7 +615,7 @@
         "N"
       ],
       "commands": [
-        "workbench.action.evenEditorWidths"
+        "workbench.action.toggleMaximizeEditorGroup"
       ]
     },
     {
