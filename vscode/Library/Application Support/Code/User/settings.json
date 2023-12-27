@@ -5,6 +5,7 @@
   "workbench.productIconTheme": "icons-carbon",
   "workbench.iconTheme": "file-icons",
   "workbench.fontAliasing": "antialiased",
+  "workbench.tree.enableStickyScroll": true,
   "editor.fontFamily": "'FiraCode Nerd Font Mono', 'Monaco Nerd Font', 'Menlo', 'DejaVu Sans Mono', 'Lucida Console', monospace",
   "editor.fontSize": 14,
   "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss06', 'zero'",
@@ -627,6 +628,16 @@
         "workbench.view.explorer"
       ]
     }
+    ,
+    {
+      "before": [
+        "<Leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.experimental.quickTextSearch"
+      ]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -686,5 +697,14 @@
   "workbench.editor.empty.hint": "hidden",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "workbench.editor.tabActionLocation": "left",
+  "git.showActionButton": {
+    "commit": false,
+    "publish": false,
+    "sync": false
+  },
+  "scm.showActionButton": false,
+  "scm.showInputActionButton": false,
+  "git.autoStash": true,
 }
