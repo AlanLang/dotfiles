@@ -38,6 +38,8 @@
   autocorrect = 1
 
 [alias]
+  cn = commit --no-verify -m
   ca = commit --amend --reuse-message=HEAD
+  cm = commit --amend --message
   pf = push -f
   pd = push -u dev
