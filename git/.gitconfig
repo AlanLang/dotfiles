@@ -21,8 +21,17 @@
 [pull]
   rebase = true
 
+[merge]
+  conflictstyle = zdiff3
+
+[diff]
+  algorithm = histogram
+
 [init]
   defaultBranch = main
+
+[branch]
+  sort = -committerdate
 
 [push]
   default = simple
@@ -37,7 +46,11 @@
 [help]
   autocorrect = 1
 
+[log]
+  date = iso
+
 [alias]
+  cc = commit --no-verify -m "need change code"
   cn = commit --no-verify -m
   ca = commit --amend --reuse-message=HEAD
   cm = commit --amend --message

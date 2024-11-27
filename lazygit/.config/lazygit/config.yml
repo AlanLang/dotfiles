@@ -237,6 +237,14 @@ keybinding:
     update: 'u'
     bulkMenu: 'b'
 customCommands:
+  - key: "D"
+    context: "localBranches"
+    description: "生成当前分支的 diff 文件"
+    command: "git diff {{.CheckedOutBranch.Name}} {{.SelectedLocalBranch.Name}} > ./alan.diff"
+  - key: "A"
+    context: "localBranches"
+    description: "把 diff 文件应用到当前分支"
+    command: "git apply ./alan.diff"
   - key: 'T'
     context: 'global'
     command: 'git push -u dev'
