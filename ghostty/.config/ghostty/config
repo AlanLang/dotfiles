@@ -1,0 +1,25 @@
+font-family = "FiraCode Nerd Font"
+
+background-opacity = 0.9
+
+palette = 0=#1e2a33
+palette = 1=#db686a
+palette = 2=#a2c598
+palette = 3=#f2c973
+palette = 4=#7197c7
+palette = 5=#bd95c1
+palette = 6=#73b0b1
+palette = 7=#fefefe
+palette = 8=#67727c
+palette = 9=#db686a
+palette = 10=#a2c598
+palette = 11=#f2c973
+palette = 12=#7197c7
+palette = 13=#bd95c1
+palette = 14=#73b0b1
+palette = 15=#fefefe
+background = 1e2a33
+foreground = c0c4cd
+cursor-color = c0c4cd
+selection-background = 515a64
+selection-foreground = c0c4cd
