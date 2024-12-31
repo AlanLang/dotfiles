@@ -1,5 +1,19 @@
 font-family = "FiraCode Nerd Font"
 
+# 鼠标相关
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+# macOS 特定
+macos-titlebar-style = hidden
+
+# 窗口设置
+window-padding-balance = true
+window-save-state = always
+window-colorspace = "display-p3"
+
+cursor-style = block
+
 background-opacity = 0.9
 
 palette = 0=#1e2a33
