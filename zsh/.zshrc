@@ -132,3 +132,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# nvim
+export PATH="/usr/local/nvim/bin:$PATH"
