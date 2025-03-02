@@ -121,6 +121,7 @@ alias dc='docker-compose'
 alias gz='tar -zcvf file.tar.gz'
 alias ugz='tar -zxvf'
 alias vi='nvim'
+alias lg='lazygit'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -135,3 +136,9 @@ esac
 
 # nvim
 export PATH="/usr/local/nvim/bin:$PATH"
+# bun completions
+[ -s "/Users/alan/.bun/_bun" ] && source "/Users/alan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
