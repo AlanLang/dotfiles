@@ -28,8 +28,6 @@ local telescope_config = function()
       -- please take a look at the readme of the extension you want to configure
     }
   }
-
-  telescope.load_extension("command_center")
 end
 
 return {

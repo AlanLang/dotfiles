@@ -1,6 +1,6 @@
 local config = {
   options = {
-    theme = "oceanicnext",
+    theme = "auto",
     component_separators = { left = "|", right = "|" },
     -- https://github.com/ryanoasis/powerline-extra-symbols
     section_separators = { left = " ", right = "" },

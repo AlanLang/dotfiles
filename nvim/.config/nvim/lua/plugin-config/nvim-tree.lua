@@ -1,5 +1,4 @@
 -- 列表操作快捷键
-local list_keys = require("keybindings").nvimTreeList
 local function my_on_attach(bufnr)
   local api = require "nvim-tree.api"
 
@@ -33,8 +32,6 @@ local config = {
     width = 40,
     -- 也可以 'right'
     side = "right",
-    -- 隐藏根目录
-    hide_root_folder = false,
     -- 不显示行数
     number = false,
     relativenumber = false,

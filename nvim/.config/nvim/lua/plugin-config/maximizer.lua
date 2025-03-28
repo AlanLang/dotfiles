@@ -1,5 +1,6 @@
 return {
   "0x00-ketsu/maximizer.nvim",
+  dependencies = { "folke/which-key.nvim" },
   lazy = true,
   keys = {
     { "<leader>n", '<cmd>lua require("maximizer").toggle()<CR>' },

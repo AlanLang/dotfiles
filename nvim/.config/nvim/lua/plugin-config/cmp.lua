@@ -1,21 +1,30 @@
+local bind_keys = function(cmp)
+  return {
+    -- 出现补全
+    ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    -- 取消
+    ["<A-,>"] = cmp.mapping({
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close(),
+    }),
+    -- 上一个
+    ["<up>"] = cmp.mapping.select_prev_item(),
+    -- 下一个
+    ["<down>"] = cmp.mapping.select_next_item(),
+    -- 确认
+    ["<CR>"] = cmp.mapping.confirm({
+      select = true,
+      behavior = cmp.ConfirmBehavior.Replace,
+    }),
+    -- 如果窗口内容太多，可以滚动
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+  }
+end
+
 local cmp_config = function()
   local cmp = require("cmp")
   local luasnip = require("luasnip")
-  local format = {
-    format = require("lspkind").cmp_format({
-      mode = 'symbol',
-      --mode = 'symbol', -- show only symbol annotations
-
-      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-      -- The function below will be called before any actual modifications from lspkind
-      -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
-      before = function(entry, vim_item)
-        -- Source 显示提示来源
-        vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
-        return vim_item
-      end
-    })
-  }
   cmp.setup({
     completion = {
       -- 自动选中第一条
@@ -39,11 +48,8 @@ local cmp_config = function()
       { name = "buffer",   priority = 500 },
       { name = "path",     priority = 250 },
     },
-
     -- 快捷键设置
-    mapping = require("keybindings").cmp(cmp),
-    -- 使用lspkind-nvim显示类型图标
-    formatting = format
+    mapping = bind_keys(cmp),
   })
 
   -- / 查找模式使用 buffer 源
