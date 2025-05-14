@@ -256,7 +256,7 @@ customCommands:
     - key: 'a'
       context: 'localBranches'
       description: '基于当前时间创建一个新分支'
-      command: 'git checkout -b $(git rev-parse --abbrev-ref HEAD)-$(date +%m%d%H%M)'
+      command: 'git checkout -b {{.SelectedLocalBranch.Name}}-$(date +%m%d%H%M)'
       loadingText: 'Creating branch from {{.SelectedLocalBranch.Name}}'
     - key: 'n'
       context: 'global'
