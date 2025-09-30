@@ -52,6 +52,7 @@
 [alias]
   cc = commit --no-verify -m "need change code"
   cn = commit --no-verify -m
+  cna = commit --no-verify --amend --reuse-message=HEAD
   ca = commit --amend --reuse-message=HEAD
   cm = commit --amend --message
   pf = push -f
