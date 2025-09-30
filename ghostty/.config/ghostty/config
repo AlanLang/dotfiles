@@ -5,7 +5,7 @@ mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
 
 # macOS 特定
-macos-titlebar-style = hidden
+# macos-titlebar-style = hidden
 
 # 窗口设置
 window-padding-balance = true
