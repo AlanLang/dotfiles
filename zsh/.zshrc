@@ -125,6 +125,7 @@ alias gz='tar -zcvf file.tar.gz'
 alias ugz='tar -zxvf'
 alias vi='nvim'
 alias lg='lazygit'
+alias cc='claude --dangerously-skip-permissions'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
