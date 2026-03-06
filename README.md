@@ -15,5 +15,10 @@ cd ~/dotfiles
 stow git
 ```
 
+## change linkage
+```bash
+stow -D zsh-starship && stow zsh
+```
+
 ## Font
 https://github.com/ryanoasis/nerd-fonts/releases
