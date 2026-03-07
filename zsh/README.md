@@ -39,10 +39,9 @@ plugins=( [plugins...] zsh-syntax-highlighting)
 ```
 
 
-### 主题
-https://github.com/romkatv/powerlevel10k 
+### Starship
+https://starship.rs/
 
 ```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+curl -sS https://starship.rs/install.sh | sh
 ```
-Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`

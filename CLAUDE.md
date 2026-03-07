@@ -9,8 +9,7 @@ Each top-level directory is a Stow package. Running `stow <dir>` from the repo r
 ```
 dotfiles/
 ├── git/            # .gitconfig, .config/git/ignore
-├── zsh-starship/   # .zshrc (Oh My Zsh + Starship) + .config/starship.toml
-├── zsh/            # .zshrc (Oh My Zsh + Powerlevel10k) + .p10k.zsh (legacy)
+├── zsh/            # .zshrc (Oh My Zsh + Starship) + .config/starship.toml
 ├── nvim/           # .config/nvim/ (Lua config, lazy.nvim)
 ├── vim/            # .vimrc
 ├── tmux/           # .tmux.conf, .tmux.conf.local
@@ -26,7 +25,7 @@ dotfiles/
 ## Key Conventions
 
 - **Language**: Config comments and sub-READMEs are in Chinese (Simplified).
-- **Shell**: Primary shell is Zsh with Oh My Zsh. The active setup uses `zsh-starship` (Starship prompt); `zsh` (Powerlevel10k) is the legacy alternative.
+- **Shell**: Primary shell is Zsh with Oh My Zsh + Starship prompt.
 - **Editor**: Neovim is the primary editor (`nvim/`). Vim config (`vim/`) is a lightweight fallback for servers.
 - **Font**: FiraCode Nerd Font is expected (configured in Ghostty).
 - **Theme**: Catppuccin Mocha is the preferred color palette (used in Starship config).

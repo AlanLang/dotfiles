@@ -7,8 +7,7 @@
 | 目录 | 说明 |
 | --- | --- |
 | `git` | Git 全局配置（`.gitconfig`、`.config/git/ignore`） |
-| `zsh-starship` | Zsh + Oh My Zsh + Starship 提示符（推荐） |
-| `zsh` | Zsh + Oh My Zsh + Powerlevel10k 提示符（旧方案） |
+| `zsh` | Zsh + Oh My Zsh + Starship 提示符 |
 | `nvim` | Neovim 配置（Lua，使用 lazy.nvim 插件管理） |
 | `vim` | Vim 基础配置（`.vimrc`） |
 | `tmux` | Tmux 配置（基于 gpakosz/.tmux） |
@@ -47,18 +46,10 @@ cd ~/dotfiles
 stow git
 
 # 安装多个配置
-stow git zsh-starship nvim tmux lazygit ghostty
+stow git zsh nvim tmux lazygit ghostty
 ```
 
 Stow 会在 `$HOME` 创建符号链接，指向仓库中的对应文件。
-
-### 切换配置
-
-例如从 `zsh-starship` 切换到 `zsh`：
-
-```bash
-stow -D zsh-starship && stow zsh
-```
 
 ### 快速初始化（服务器环境）
 
@@ -70,7 +61,7 @@ bash start.sh
 
 ## 常用别名
 
-以下别名定义在 `zsh-starship/.zshrc` 中：
+以下别名定义在 `zsh/.zshrc` 中：
 
 | 别名 | 命令 |
 | --- | --- |
