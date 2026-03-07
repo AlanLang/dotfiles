@@ -51,6 +51,28 @@ stow git zsh nvim tmux lazygit ghostty
 
 Stow 会在 `$HOME` 创建符号链接，指向仓库中的对应文件。
 
+### Stow 常用操作
+
+```bash
+# 安装配置（创建符号链接）
+stow git
+
+# 卸载配置（移除符号链接，不会删除仓库中的文件）
+stow -D git
+
+# 切换配置（先卸载旧的，再安装新的）
+stow -D vim && stow nvim
+
+# 重新安装（先卸载再安装，适用于配置结构变更后）
+stow -R git
+
+# 模拟运行（只显示会做什么，不实际执行）
+stow -n -v git
+
+# 安装到指定目录（默认目标是父目录，即 $HOME）
+stow -t ~/.config nvim
+```
+
 ### 快速初始化（服务器环境）
 
 在新服务器上快速配置 vim + tmux + fish：
