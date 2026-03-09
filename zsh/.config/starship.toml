@@ -12,6 +12,7 @@ $git_branch\
 $git_status\
 [](fg:yellow bg:green)\
 $git_commit\
+$git_state\
 [](fg:green bg:sapphire)\
 $c\
 $rust\
@@ -88,6 +89,29 @@ format = '[[ $symbol $branch ](fg:crust bg:yellow)]($style)'
 [git_status]
 style = "bg:yellow"
 format = '[[($all_status$ahead_behind )](fg:crust bg:yellow)]($style)'
+conflicted = '=${count} '
+ahead = '⇡${count} '
+behind = '⇣${count} '
+diverged = '⇕⇡${ahead_count}⇣${behind_count} '
+up_to_date = ''
+untracked = '?${count} '
+stashed = '\$${count} '
+modified = '!${count} '
+staged = '+${count} '
+renamed = '»${count} '
+deleted = '✘${count} '
+typechanged = ''
+
+[git_state]
+style = "bg:green"
+format = '[[ $state( $progress_current/$progress_total) ](fg:crust bg:green)]($style)'
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+cherry_pick = " PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
 
 [nodejs]
 symbol = ""
