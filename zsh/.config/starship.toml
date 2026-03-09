@@ -24,7 +24,6 @@ $conda\
 [](fg:sapphire bg:lavender)\
 $time\
 [ ](fg:lavender)\
-$cmd_duration\
 $line_break\
 $character"""
 
