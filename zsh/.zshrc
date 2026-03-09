@@ -36,6 +36,7 @@ alias cc='claude --dangerously-skip-permissions'
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/Users/alan/Library/Mobile Documents/com~apple~CloudDocs/Sync/bin:$PATH"
 
 # --- Starship prompt (must be at the end) ---
 eval "$(starship init zsh)"
