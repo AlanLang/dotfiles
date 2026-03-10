@@ -16,6 +16,7 @@ zstyle ':omz:lib:directories' aliases no
 source $ZSH/oh-my-zsh.sh
 
 # --- Environment ---
+export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR='nvim'
 export PATH="$HOME/.local/bin:$PATH"
 
