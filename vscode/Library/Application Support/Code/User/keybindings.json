@@ -1,4 +1,5 @@
 [
+  // --- Git 面板: Shift+Cmd+G (替代默认 Ctrl+Shift+G) ---
   {
     "key": "shift+cmd+g",
     "command": "-editor.action.previousMatchFindAction",
@@ -15,36 +16,70 @@
     "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "shift+cmd+g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active"
-  },
-  {
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active"
   },
   {
-    "key": "shift+cmd+g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-  },
-  {
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "shift+cmd+g",
+    "command": "workbench.view.scm"
+  },
+
+  // --- 编辑器聚焦: Cmd+E ---
+  {
+    "key": "cmd+e",
+    "command": "-actions.findWithSelection"
   },
   {
     "key": "cmd+e",
     "command": "workbench.action.focusActiveEditorGroup"
   },
+
+  // --- 搜索: Cmd+F 用选中文本搜索 ---
   {
     "key": "cmd+f",
     "command": "actions.findWithSelection"
   },
-  {
-    "key": "cmd+e",
-    "command": "-actions.findWithSelection"
-  }
 
+  // --- 终端: Cmd+J 切换终端面板 ---
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "cmd+j",
+    "command": "-workbench.action.togglePanel"
+  },
+
+  // --- 恢复关闭的标签页: Shift+Cmd+T (保持与浏览器一致) ---
+  {
+    "key": "cmd+t",
+    "command": "-workbench.action.showAllSymbols"
+  },
+
+  // --- 资源管理器: Shift+Cmd+E ---
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.view.explorer"
+  },
+
+  // --- 切换窗口: Cmd+; ---
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "workbench.action.switchWindow"
+  }
 ]
