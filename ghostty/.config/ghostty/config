@@ -1,4 +1,8 @@
 font-family = "FiraCode Nerd Font"
+font-family = "PingFang SC"
+font-size = 12
+#font-thicken = true
+#font-thicken-strength = 128
 
 # 鼠标相关
 mouse-hide-while-typing = true
