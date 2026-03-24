@@ -18,7 +18,7 @@ window-colorspace = "display-p3"
 
 cursor-style = block
 
-background-opacity = 0.9
+background-opacity = 0.95
 
 palette = 0=#1e2a33
 palette = 1=#db686a
