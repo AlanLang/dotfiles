@@ -57,3 +57,6 @@
   cm = commit --amend --message
   pf = push -f
   pd = push -u dev
+
+[includeIf "gitdir/i:/Users/alan/code/work/"]
+  path = /Users/alan/code/work/.gitconfig
