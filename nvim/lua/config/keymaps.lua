@@ -22,6 +22,10 @@ vim.keymap.set("n", "<leader>sm", function()
   })
 end, { desc = "Marks (可 <C-d> 删除)" })
 
+-- 保存所有 buffer
+vim.keymap.set("n", "<leader>bs", "<cmd>wa<cr>", { desc = "Save All Buffers" })
+vim.keymap.set("n", "<leader>bw", "<cmd>w<cr>", { desc = "Save Buffer" })
+
 -- 复制当前文件路径 + 行号（相对路径）
 vim.keymap.set("n", "<leader>yl", function()
   local path = vim.fn.expand("%:.")
