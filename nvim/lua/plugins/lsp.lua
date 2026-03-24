@@ -6,11 +6,6 @@ return {
       inlay_hints = {
         enabled = false,
       },
-      -- ESLint warning 不显示下划线，只对 error 显示
-      diagnostics = {
-        underline = { severity = vim.diagnostic.severity.ERROR },
-        virtual_text = false,
-      },
     },
   },
 }
