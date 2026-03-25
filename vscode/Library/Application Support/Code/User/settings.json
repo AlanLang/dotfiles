@@ -319,7 +319,7 @@
         {
             "before": [
                 "leader",
-                "g"
+                "space"
             ],
             "commands": [
                 "workbench.action.quickOpen"
@@ -520,7 +520,8 @@
         {
             "before": [
                 "<Leader>",
-                "o"
+                "s",
+                "s"
             ],
             "commands": [
                 "workbench.action.gotoSymbol"
