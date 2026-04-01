@@ -32,6 +32,7 @@ alias gz='tar -zcvf file.tar.gz'
 alias ugz='tar -zxvf'
 alias lg='lazygit'
 alias cc='claude --dangerously-skip-permissions'
+alias oc='opencode'
 
 # --- Bun ---
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
@@ -41,3 +42,6 @@ export PATH="/Users/alan/Library/Mobile Documents/com~apple~CloudDocs/Sync/bin:$
 
 # --- Starship prompt (must be at the end) ---
 eval "$(starship init zsh)"
+
+# opencode
+export PATH=/Users/alan/.opencode/bin:$PATH
