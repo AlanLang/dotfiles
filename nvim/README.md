@@ -73,6 +73,9 @@ nvim
 | [stylua](https://github.com/JohnnyMorganz/StyLua) | Lua 格式化，与 `stylua.toml` 配合 |
 | [prettier](https://prettier.io/) | JS/TS/CSS/HTML/JSON 等格式化 |
 
+### macOS 下自动切换输入法
+https://github.com/laishulu/macism
+
 ### 终端字体
 
 Neovim 的图标和 UI 需要 Nerd Font，推荐：
