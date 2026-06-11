@@ -4,6 +4,9 @@ font-size = 13
 #font-thicken = true
 #font-thicken-strength = 128
 
+# SSH 集成：自动把 ghostty terminfo 装到远端；失败时回退为 TERM=xterm-256color
+shell-integration-features = ssh-env,ssh-terminfo
+
 # 鼠标相关
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2
