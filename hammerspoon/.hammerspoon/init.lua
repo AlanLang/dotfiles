@@ -1,11 +1,15 @@
 -- 按 App 自动切换输入法
 -- 切换到下表中的 App 时，自动把输入法切到指定的 source ID
--- 常用 ID：英文 "com.apple.keylayout.ABC"，简体拼音 "com.apple.inputmethod.SCIM.ITABC"
+-- 常用 ID：英文 "com.apple.keylayout.ABC"，Rime 鼠须管 "im.rime.inputmethod.Squirrel.Hans"，
+-- 系统简体拼音 "com.apple.inputmethod.SCIM.ITABC"
+
+local english = "com.apple.keylayout.ABC"
+local chinese = "im.rime.inputmethod.Squirrel.Hans"
 
 local inputSourceForApp = {
-  ["com.onevcat.prowl"] = "com.apple.keylayout.ABC",
-  ["com.tencent.xinWeChat"] = "com.apple.inputmethod.SCIM.ITABC", -- 微信 → 中文
-  ["com.tencent.WeWorkMac"] = "com.apple.inputmethod.SCIM.ITABC", -- 企业微信 → 中文
+  ["com.onevcat.prowl"] = english,
+  ["com.tencent.xinWeChat"] = chinese, -- 微信
+  ["com.tencent.WeWorkMac"] = chinese, -- 企业微信
 }
 
 appInputWatcher = hs.application.watcher.new(function(_, eventType, app)
