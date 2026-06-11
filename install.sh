@@ -8,11 +8,8 @@ step() { echo; echo "==> $*"; }
 step "Homebrew"
 bash "$SCRIPT_DIR/scripts/homebrew.sh"
 
-step "Apps (Brewfile)"
+step "Apps & Fonts (Brewfile)"
 bash "$SCRIPT_DIR/scripts/apps.sh"
-
-step "Fonts"
-bash "$SCRIPT_DIR/scripts/fonts.sh"
 
 step "Dotfiles"
 bash "$SCRIPT_DIR/scripts/dotfiles.sh"

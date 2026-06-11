@@ -4,7 +4,7 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 # 需要 stow 的包（zsh 由 zsh.sh 在安装 oh-my-zsh 之后处理）
-PACKAGES=(git tmux ghostty lazygit nvim hammerspoon rime)
+PACKAGES=(git tmux ghostty lazygit nvim hammerspoon rime vscode)
 
 install_dotfiles() {
   # stow depends on brew being available
@@ -23,7 +23,8 @@ install_dotfiles() {
 
   # 预创建目标目录，让 stow 只链接文件而不是整个目录，
   # 避免运行时生成的文件（如 Hammerspoon 的 Spoons/、Rime 的词库）落进仓库
-  mkdir -p "$HOME/.config" "$HOME/.hammerspoon" "$HOME/Library/Rime"
+  mkdir -p "$HOME/.config" "$HOME/.hammerspoon" "$HOME/Library/Rime" \
+    "$HOME/Library/Application Support/Code/User"
 
   # Stow each package
   echo "[dotfiles] symlinking configs..."

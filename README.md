@@ -11,7 +11,6 @@
 | `nvim` | Neovim 配置（Lua，使用 lazy.nvim 插件管理） |
 | `vim` | Vim 基础配置（`.vimrc`） |
 | `tmux` | Tmux 配置（基于 gpakosz/.tmux） |
-| `fish` | Fish Shell 配置 |
 | `ghostty` | Ghostty 终端配置 |
 | `lazygit` | Lazygit Git TUI 配置（中文界面） |
 | `hammerspoon` | Hammerspoon 自动化脚本（按 App 自动切换输入法，macOS） |
@@ -30,13 +29,12 @@ bash install.sh
 | 步骤 | 内容 |
 |------|------|
 | Homebrew | macOS 包管理器 |
-| Apps | Chrome、Ghostty、Setapp、VS Code、微信、企业微信、Bob、Hammerspoon（`Brewfile`） |
-| Fonts | FiraCode Nerd Font |
-| Dotfiles | stow 本仓库的 git / tmux / ghostty / lazygit / nvim / hammerspoon / rime 配置 |
+| Apps & Fonts | `Brewfile`：CLI 工具（stow / neovim / ripgrep…）、FiraCode Nerd Font、GUI 应用（Chrome、Ghostty、Setapp、VS Code、微信、企业微信、Bob、Hammerspoon、鼠须管） |
+| Dotfiles | stow 本仓库的 git / tmux / ghostty / lazygit / nvim / hammerspoon / rime / vscode 配置 |
 | Zsh | Oh My Zsh + zsh-autosuggestions + zsh-syntax-highlighting + Starship，并 stow zsh 配置 |
-| Node.js | 最新版 Node.js + pnpm |
-| Neovim | 依赖安装（ripgrep / fd / fzf / lazygit…），配置由 Dotfiles 步骤 stow |
-| Rime 鼠须管 | 安装鼠须管 + [rime-ice](https://github.com/iDvel/rime-ice) 方案，自定义配置由 Dotfiles 步骤 stow |
+| Node.js | 最新版 Node.js + pnpm 10.10 |
+| Neovim | npm 依赖（prettier），brew 依赖在 Brewfile 中，配置由 Dotfiles 步骤 stow |
+| Rime 鼠须管 | [rime-ice](https://github.com/iDvel/rime-ice) 方案，自定义配置由 Dotfiles 步骤 stow |
 | macOS 系统设置 | Dock 居右自动隐藏；Finder 显示隐藏文件、路径栏、默认打开下载目录、清空回收站不提示 |
 
 ### 安装后手动操作
@@ -81,7 +79,7 @@ stow -n -v git
 
 ## 快速初始化（服务器环境）
 
-在新服务器上快速配置 vim + tmux + fish：
+在新服务器上快速配置 vim + tmux + fish（可重复执行）：
 
 ```bash
 bash start.sh

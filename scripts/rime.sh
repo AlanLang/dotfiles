@@ -5,15 +5,7 @@ RIME_USER_DIR="$HOME/Library/Rime"
 RIME_ICE_REPO="https://github.com/iDvel/rime-ice.git"
 RIME_ICE_DIR="/tmp/rime-ice"
 
-install_squirrel() {
-  if brew list --cask squirrel &>/dev/null; then
-    echo "[rime] squirrel already installed, skipping"
-  else
-    echo "[rime] installing squirrel..."
-    brew install --cask squirrel
-  fi
-}
-
+# 鼠须管（cask "squirrel"）在 Brewfile 中，由 apps.sh 安装
 install_rime_ice() {
   echo "[rime] cloning rime-ice..."
   rm -rf "$RIME_ICE_DIR"
@@ -30,7 +22,6 @@ install_rime_ice() {
 }
 
 # 自定义配置（*.custom.yaml 等）由 dotfiles.sh 统一 stow（rime 包）
-install_squirrel
 install_rime_ice
 
 echo "[rime] done — please deploy Rime from the menu bar to take effect"

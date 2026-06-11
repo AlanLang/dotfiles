@@ -38,14 +38,17 @@ alias oc='opencode'
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="/Users/alan/Library/Mobile Documents/com~apple~CloudDocs/Sync/bin:$PATH"
+
+# --- iCloud 同步的脚本 ---
+export PATH="$HOME/Library/Mobile Documents/com~apple~CloudDocs/Sync/bin:$PATH"
+
+# --- opencode ---
+export PATH="$HOME/.opencode/bin:$PATH"
+
+# --- nvm ---
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # --- Starship prompt (must be at the end) ---
 eval "$(starship init zsh)"
-
-# opencode
-export PATH=/Users/alan/.opencode/bin:$PATH
-
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
