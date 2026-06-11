@@ -1,0 +1,3 @@
+patch:
+  style/color_scheme: apathy # 设置皮肤
+  show_notifications_when: never # 不显示切换提示

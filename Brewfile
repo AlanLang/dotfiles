@@ -1,0 +1,8 @@
+cask "google-chrome"
+cask "ghostty"
+cask "setapp"
+cask "visual-studio-code"
+cask "wechat"
+cask "wechatwork"
+cask "bob-app"
+cask "hammerspoon"

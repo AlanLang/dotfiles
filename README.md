@@ -1,6 +1,6 @@
 # Alan's Dotfiles
 
-使用 [GNU Stow](https://www.gnu.org/software/stow/) 管理的个人配置文件集合。每个子目录对应一个工具的配置，可以独立安装。
+个人配置文件集合（[GNU Stow](https://www.gnu.org/software/stow/) 管理）+ macOS 一键初始化脚本。
 
 ## 包含的配置
 
@@ -14,33 +14,41 @@
 | `fish` | Fish Shell 配置 |
 | `ghostty` | Ghostty 终端配置 |
 | `lazygit` | Lazygit Git TUI 配置（中文界面） |
-| `skhd` | skhd 快捷键配置（macOS） |
 | `hammerspoon` | Hammerspoon 自动化脚本（按 App 自动切换输入法，macOS） |
+| `rime` | Rime 鼠须管自定义配置（小鹤双拼，链接到 `~/Library/Rime`，macOS） |
 | `iterm2` | iTerm2 配色方案导出 |
 | `vscode` | VS Code 用户配置 |
 
-## 安装
-
-### 前置依赖
-
-**macOS:**
-```bash
-brew install stow
-```
-
-**Ubuntu / Debian:**
-```bash
-sudo apt install stow
-```
-
-### 字体
-
-需要安装 [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts/releases)，推荐 **FiraCode Nerd Font**。
-
-### 使用 Stow 安装配置
+## macOS 一键初始化（重装系统后）
 
 ```bash
 git clone https://github.com/AlanLang/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+bash install.sh
+```
+
+| 步骤 | 内容 |
+|------|------|
+| Homebrew | macOS 包管理器 |
+| Apps | Chrome、Ghostty、Setapp、VS Code、微信、企业微信、Bob、Hammerspoon（`Brewfile`） |
+| Fonts | FiraCode Nerd Font |
+| Dotfiles | stow 本仓库的 git / tmux / ghostty / lazygit / nvim / hammerspoon / rime 配置 |
+| Zsh | Oh My Zsh + zsh-autosuggestions + zsh-syntax-highlighting + Starship，并 stow zsh 配置 |
+| Node.js | 最新版 Node.js + pnpm |
+| Neovim | 依赖安装（ripgrep / fd / fzf / lazygit…），配置由 Dotfiles 步骤 stow |
+| Rime 鼠须管 | 安装鼠须管 + [rime-ice](https://github.com/iDvel/rime-ice) 方案，自定义配置由 Dotfiles 步骤 stow |
+| macOS 系统设置 | Dock 居右自动隐藏；Finder 显示隐藏文件、路径栏、默认打开下载目录、清空回收站不提示 |
+
+### 安装后手动操作
+
+- **Rime**：点击菜单栏输入法图标 → 重新部署
+- **Neovim**：首次打开会自动安装所有插件，等待完成即可
+- **Hammerspoon**：首次打开需在 系统设置 → 隐私与安全性 → 辅助功能 中授权，并在其 Preferences 中勾选 "Launch Hammerspoon at login"
+
+## 手动安装单个配置（Stow）
+
+```bash
+brew install stow   # Ubuntu/Debian: sudo apt install stow
 cd ~/dotfiles
 
 # 安装单个配置（例如 git）
@@ -69,12 +77,9 @@ stow -R git
 
 # 模拟运行（只显示会做什么，不实际执行）
 stow -n -v git
-
-# 安装到指定目录（默认目标是父目录，即 $HOME）
-stow -t ~/.config nvim
 ```
 
-### 快速初始化（服务器环境）
+## 快速初始化（服务器环境）
 
 在新服务器上快速配置 vim + tmux + fish：
 

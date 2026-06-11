@@ -1,0 +1,4 @@
+patch:
+  schema_list:
+    - schema: double_pinyin_flypy #使用小鹤双拼
+  ascii_composer/switch_key/Caps_Lock: commit_code #上屏原始的编码，然后切换到英文
