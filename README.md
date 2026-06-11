@@ -15,6 +15,7 @@
 | `ghostty` | Ghostty 终端配置 |
 | `lazygit` | Lazygit Git TUI 配置（中文界面） |
 | `skhd` | skhd 快捷键配置（macOS） |
+| `hammerspoon` | Hammerspoon 自动化脚本（按 App 自动切换输入法，macOS） |
 | `iterm2` | iTerm2 配色方案导出 |
 | `vscode` | VS Code 用户配置 |
 

@@ -17,6 +17,7 @@ dotfiles/
 ├── ghostty/        # .config/ghostty/config
 ├── lazygit/        # .config/lazygit/config.yml
 ├── skhd/           # .config/skhd/skhdrc (macOS only)
+├── hammerspoon/    # .hammerspoon/init.lua (macOS only, 按 App 自动切换输入法)
 ├── iterm2/         # iTerm2 profile JSON export
 ├── vscode/         # VS Code user settings (macOS path)
 └── start.sh        # Quick server bootstrap (vim + tmux + fish)
