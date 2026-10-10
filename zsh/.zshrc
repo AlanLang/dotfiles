@@ -52,3 +52,6 @@ export NVM_DIR="$HOME/.config/nvm"
 
 # --- Starship prompt (must be at the end) ---
 eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/Users/alan/.bun/_bun" ] && source "/Users/alan/.bun/_bun"

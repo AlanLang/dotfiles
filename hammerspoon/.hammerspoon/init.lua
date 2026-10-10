@@ -8,6 +8,7 @@ local chinese = "im.rime.inputmethod.Squirrel.Hans"
 
 local inputSourceForApp = {
   ["com.onevcat.prowl"] = english,
+  ["com.mitchellh.ghostty"] = english,
   ["com.tencent.xinWeChat"] = chinese, -- 微信
   ["com.tencent.WeWorkMac"] = chinese, -- 企业微信
 }

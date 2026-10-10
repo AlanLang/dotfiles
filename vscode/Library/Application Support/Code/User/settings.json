@@ -48,7 +48,7 @@
     "workbench.list.smoothScrolling": true,
     "workbench.tree.expandMode": "singleClick",
     "workbench.tree.indent": 10,
-    "extensions.autoUpdate": "onlyEnabledExtensions",
+    "extensions.autoUpdate": "on",
     "extensions.ignoreRecommendations": true,
     "files.eol": "\n",
     "files.insertFinalNewline": false,
@@ -815,8 +815,6 @@
     },
     "atlascode.jira.enabled": true,
     "biome.suggestInstallingGlobally": false,
-    "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
     "workbench.secondarySideBar.defaultVisibility": "hidden",
     "gitlens.remotes": [
         {
