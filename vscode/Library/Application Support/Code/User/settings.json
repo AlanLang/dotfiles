@@ -835,5 +835,6 @@
         }
     ],
     "claudeCode.preferredLocation": "panel",
-    "workbench.sideBar.location": "right"
+    "workbench.sideBar.location": "right",
+    "window.confirmSaveUntitledWorkspace": false
 }
