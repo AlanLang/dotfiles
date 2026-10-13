@@ -107,6 +107,11 @@ local function terminalShortcutWindow()
 end
 
 local function pasteTerminalPrompt(window, content)
+  local currentWindow = terminalShortcutWindow()
+  if not currentWindow or currentWindow:id() ~= window:id() then
+    toast.show("原终端窗口未获得焦点，请重新触发快捷键")
+    return
+  end
   hs.pasteboard.setContents(content)
   hs.eventtap.keyStroke({ "cmd" }, "v")
   hs.timer.doAfter(0.2, function()
@@ -118,9 +123,77 @@ local function pasteTerminalPrompt(window, content)
   end)
 end
 
+-- 在此维护选择列表：text 为名称，description 为说明，prompt 为实际发送的提示词。
+local terminalPrompts = {
+  {
+    text = "检查当前改动",
+    description = "检查缺陷、边界情况和回归，先报告发现",
+    prompt = "Review the current diff for bugs, edge cases, and regressions. Report findings before making changes.",
+  },
+  {
+    text = "运行检查和测试",
+    description = "运行相关检查与测试，修复改动引起的失败",
+    prompt = "Run the relevant checks and tests. Fix any failures caused by these changes.",
+  },
+  {
+    text = "执行方案并验证",
+    description = "执行已确认的方案，并验证结果",
+    prompt = "Proceed with the proposed approach and verify the result.",
+  },
+  {
+    text = "提交并创建 PR",
+    description = "提交当前改动，并创建 Pull Request",
+    prompt = "Yes, commit the changes and create a PR.",
+  },
+}
+
+-- 复用 Toast 的冷白文字与蓝色调；提示词单独保存，避免发送 styledtext。
+local promptChoices = {}
+for _, item in ipairs(terminalPrompts) do
+  table.insert(promptChoices, {
+    text = hs.styledtext.new(item.text, {
+      font = { name = "PingFangSC-Semibold", size = 13 },
+      color = { red = 0.9, green = 0.93, blue = 0.98, alpha = 1 },
+    }),
+    subText = hs.styledtext.new(item.description, {
+      font = { name = "PingFangSC-Regular", size = 11 },
+      color = { red = 0.45, green = 0.68, blue = 0.9, alpha = 1 },
+    }),
+    prompt = item.prompt,
+  })
+end
+
+local promptTargetWindow
+local promptChooser = hs.chooser.new(function(choice)
+  local window = promptTargetWindow
+  promptTargetWindow = nil
+  if not choice or not window then
+    return
+  end
+
+  -- 选择器关闭后会恢复原窗口焦点，稍等再粘贴并核对窗口。
+  hs.timer.doAfter(0.1, function()
+    pasteTerminalPrompt(window, choice.prompt)
+  end)
+end)
+promptChooser:choices(promptChoices)
+promptChooser:bgDark(true)
+promptChooser:fgColor({ red = 0.9, green = 0.93, blue = 0.98, alpha = 1 })
+promptChooser:subTextColor({ red = 0.45, green = 0.68, blue = 0.9, alpha = 1 })
+promptChooser:placeholderText("搜索提示词 · ↑↓ 选择 · ↵ 发送 · Esc 取消")
+promptChooser:searchSubText(true)
+promptChooser:rows(#terminalPrompts)
+promptChooser:width(32)
+
+local function chooseTerminalPrompt(window)
+  promptTargetWindow = window
+  promptChooser:query("")
+  promptChooser:show()
+end
+
 
 -- ==========================================
--- 飞书项目问题快捷粘贴
+-- 根据剪贴板内容选择 AI 提示词
 -- ==========================================
 
 hs.hotkey.bind({ "ctrl", "shift", "alt", "cmd" }, "1", nil, function()
@@ -129,63 +202,25 @@ hs.hotkey.bind({ "ctrl", "shift", "alt", "cmd" }, "1", nil, function()
     return
   end
 
-  local content = hs.pasteboard.getContents()
-  local prefix = "https://project.feishu.cn/"
-
-  if not content or content:sub(1, #prefix) ~= prefix then
-    toast.show("无法在剪切板中获取飞书问题地址")
-    return
-  end
-
-  pasteTerminalPrompt(window, content .. " Investigate and fix this issue.")
-end)
-
-
--- ==========================================
--- PR 评论问题快捷粘贴
--- ==========================================
-
-hs.hotkey.bind({ "ctrl", "shift", "alt", "cmd" }, "2", nil, function()
-  local window = terminalShortcutWindow()
-  if not window then
-    return
-  end
-
-  local content = hs.pasteboard.getContents()
+  local content = (hs.pasteboard.getContents() or ""):match("^%s*(.-)%s*$")
+  local prompt
   local pattern = "^https://code%.fineres%.com/projects/[^/]+/repos/[^/]+/pull%-requests/%d+"
-  local prAddress = content and content:match(pattern)
+  local prAddress = content:match(pattern)
   local remainder = prAddress and content:sub(#prAddress + 1)
 
-  if not prAddress or (remainder ~= "" and not remainder:match("^[/#?]")) then
-    toast.show("无法在剪切板中获取 PR 地址")
+  if content:match("^https://project%.feishu%.cn/%S+$") then
+    prompt = "Investigate and fix this issue."
+  elseif prAddress and (remainder == "" or remainder:match("^[/#?]%S*$")) then
+    prompt = "Review the PR comments, assess whether each issue is valid, and fix the valid issues. Explain any comments you disagree with."
+  elseif content:match("^[A-Za-z]%-%d%d%d%d%d%d%d%d%d%d$") then
+    prompt = "提交并创建pr"
+  else
+    chooseTerminalPrompt(window)
     return
   end
 
-  pasteTerminalPrompt(window, content .. " Review the PR comments, assess whether each issue is valid, and fix the valid issues. Explain any comments you disagree with.")
+  pasteTerminalPrompt(window, content .. " " .. prompt)
 end)
-
-
--- ==========================================
--- 终端 AI 常用提示词快捷粘贴
--- ==========================================
-
-local terminalPrompts = {
-  ["3"] = "Review the current diff for bugs, edge cases, and regressions. Report findings before making changes.",
-  ["4"] = "Run the relevant checks and tests. Fix any failures caused by these changes.",
-  ["5"] = "Proceed with the proposed approach and verify the result.",
-  ["6"] = "Yes, commit the changes and create a PR.",
-}
-
-for key, prompt in pairs(terminalPrompts) do
-  hs.hotkey.bind({ "ctrl", "shift", "alt", "cmd" }, key, nil, function()
-    local window = terminalShortcutWindow()
-    if not window then
-      return
-    end
-
-    pasteTerminalPrompt(window, prompt)
-  end)
-end
 
 
 -- ==========================================
@@ -203,12 +238,11 @@ Hammerspoon 配置加载成功
   showToast("直接说")  预览底部胶囊提示
 
 快捷键：
-  Ctrl + Shift + Alt + Cmd + 1  粘贴飞书项目地址和问题处理指令
-  Ctrl + Shift + Alt + Cmd + 2  粘贴 PR 地址和评论问题处理指令
-  Ctrl + Shift + Alt + Cmd + 3  检查当前改动并报告问题
-  Ctrl + Shift + Alt + Cmd + 4  验证修复并处理相关测试失败
-  Ctrl + Shift + Alt + Cmd + 5  执行已确认的方案并验证结果
-  Ctrl + Shift + Alt + Cmd + 6  终端中粘贴提交并创建 PR 指令
+  Ctrl + Shift + Alt + Cmd + 1  根据剪贴板内容粘贴对应指令
+    飞书项目链接              调查并修复问题
+    PR 地址                   评估评论并修复有效问题
+    字母-10位数字             提交并创建pr
+    其他内容或空剪贴板        打开常用提示词选择列表
 
 自动任务：
   每天 03:00          自动更新 Surge 配置
